@@ -9,15 +9,16 @@ DSH 宿主插件：**隐式几何 + 软约束能量**，在无头 Blender 里生
 > Blender. One tool — `propose` / `energy` / `refine` / `doctor` — and deliberately no verdict:
 > constraints negotiate with a candidate *after* it exists, instead of pre-deciding the proposal.
 
-## 为什么是它
+## 设计取向
 
-对 `sixtysevenlf/dsh-blender-plugin` 的源码核对结论（详见 [`docs/CRITIQUE.md`](docs/CRITIQUE.md)）：
+上游 [`sixtysevenlf/dsh-blender-plugin`](https://github.com/sixtysevenlf/dsh-blender-plugin) 是一套完整的
+宿主插件，能力面比这里大得多：34 family / 228 op，`blender_rt_do` 可在持久内核里执行任意 bpy，
+`spec_hash` 只覆盖 `surface_*` 这一族。它把规范放在生成之前——`skills/blender-modeling/SKILL.md` §1
+的 op-first 规则、`gate_deliver` 的非 pass 即 blocked。在它自己的交付流水线里，这套约束是自洽的。
 
-- 几何并没有被 `spec_hash` 锁死——`blender_rt_do` 能跑任意 bpy，catalog 里有 sculpt/vehicle/human/sweep/generator；`spec_hash` 只覆盖 `surface_*`。
-- 真正压缩模型空间的是**规范层**：`skills/blender-modeling/SKILL.md` §1 把“op-first / 有生成器就不许从零 bpy / 例外只有一种”写成强制返工判据；`gate.py` 的 `gate_deliver` 把非 pass 变成 blocked；`deliver.py` 注释写明“下一个 minor 计划默认开启 require_gate”。
-- 所以修的不是几何内核，而是**姿态**：探索期不该有门，交付期才该有门；约束应作为能量/梯度在候选出现后介入，而不是在生成前改写提议分布。
-
-本插件是这条重构原则的最小参考实现：**explore 在前，commit 留给调用方**。
+本插件只做那条流水线的前半段：**探索期不设门，约束以能量/梯度的形式在候选出现之后介入，
+是否 commit 留给调用方**。取向的推导过程记在 [`docs/upstream-notes.md`](docs/upstream-notes.md)，
+作为本插件为什么长成这样的背景，而不是对上游的评价。
 
 ## 安装
 
@@ -107,7 +108,7 @@ python tests/selftest.py
 
 ## 文档
 
-- [`docs/CRITIQUE.md`](docs/CRITIQUE.md)：对上游 `dsh-blender-plugin` 的逐条源码核对
+- [`docs/upstream-notes.md`](docs/upstream-notes.md)：上游源码笔记，本插件取向的来源
 - [`docs/soft-vs-hard.md`](docs/soft-vs-hard.md)：soft / hard 两种调度方式的完整日志
 - [`docs/DESIGN-BRIEF.md`](docs/DESIGN-BRIEF.md)：生成这个插件的原始任务书
 - [`docs/selftest.log`](docs/selftest.log)、[`docs/selftest.json`](docs/selftest.json)：headless 自测输出
