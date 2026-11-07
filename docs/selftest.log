@@ -1,0 +1,27 @@
+softfield selftest · engine 0.1.0
+python 3.11.3 numpy 2.4.4
+PASS mesher.sphere.closed_euler2  :: closed=True euler=2 verts=4730
+PASS mesher.sphere.volume_error  :: volume=33356.797 exact=33510.3
+PASS thickness.sphere20  :: median=39.88 p05=39.83 censored=0/520
+PASS thickness.slab4  :: median=3.90 p05=2.06 censored=0/520
+PASS thickness.capsule8  :: median=15.88 p05=15.82 censored=0/520
+PASS energy.symmetry.mirrored  :: rms=0.176 state=ok
+PASS schedule.zero_before_start
+PASS schedule.one_at_end
+PASS schedule.smooth_middle
+PASS soft.free_early  :: first two moving attempts at t=0.14/0.29 must be zero
+PASS soft.step_bound  :: max_delta=0.08
+PASS soft.moves_later  :: moving_steps=5
+PASS soft.thickness_improves  :: 6.640984 -> 10.116435
+PASS soft.volume_band  :: volume=98087.844
+PASS soft.max_drift  :: max_drift=1.4536 mm
+PASS soft.no_verdict
+PASS hard.one_late_jump  :: moves=1 delta=0.454545
+PASS hard.large_drift  :: drift=7.9826 mm
+PASS hard.volume_overshoot  :: volume=187686.3 (target band 60k-100k)
+PASS hard.worse_than_soft  :: hard=187686.3 soft=98087.844
+PASS hash.deterministic  :: 91d32798471f
+PASS hash.seed_changes_lineage_only  :: genome=True lineage_changed=True
+PASS metric.field_drift_0p5mm  :: drift=0.5001 mm
+
+RESULT {"ok": true, "passed": 23, "total": 23, "elapsed_s": 21.52}

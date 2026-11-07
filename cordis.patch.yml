@@ -1,0 +1,5 @@
+# Insert the host-only soft-field tool. No dependencies, no build step.
+- insert:
+    - id: dsh-blender-soft
+      name: dsh-blender-soft
+      config: {}

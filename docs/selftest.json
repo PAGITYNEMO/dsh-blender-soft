@@ -1,0 +1,124 @@
+{
+ "ok": true,
+ "engine": "0.1.0",
+ "elapsed_s": 21.52,
+ "passed": 23,
+ "total": 23,
+ "checks": [
+  {
+   "check": "mesher.sphere.closed_euler2",
+   "ok": true,
+   "detail": "closed=True euler=2 verts=4730"
+  },
+  {
+   "check": "mesher.sphere.volume_error",
+   "ok": true,
+   "detail": "volume=33356.797 exact=33510.3"
+  },
+  {
+   "check": "thickness.sphere20",
+   "ok": true,
+   "detail": "median=39.88 p05=39.83 censored=0/520"
+  },
+  {
+   "check": "thickness.slab4",
+   "ok": true,
+   "detail": "median=3.90 p05=2.06 censored=0/520"
+  },
+  {
+   "check": "thickness.capsule8",
+   "ok": true,
+   "detail": "median=15.88 p05=15.82 censored=0/520"
+  },
+  {
+   "check": "energy.symmetry.mirrored",
+   "ok": true,
+   "detail": "rms=0.176 state=ok"
+  },
+  {
+   "check": "schedule.zero_before_start",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "schedule.one_at_end",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "schedule.smooth_middle",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "soft.free_early",
+   "ok": true,
+   "detail": "first two moving attempts at t=0.14/0.29 must be zero"
+  },
+  {
+   "check": "soft.step_bound",
+   "ok": true,
+   "detail": "max_delta=0.08"
+  },
+  {
+   "check": "soft.moves_later",
+   "ok": true,
+   "detail": "moving_steps=5"
+  },
+  {
+   "check": "soft.thickness_improves",
+   "ok": true,
+   "detail": "6.640984 -> 10.116435"
+  },
+  {
+   "check": "soft.volume_band",
+   "ok": true,
+   "detail": "volume=98087.844"
+  },
+  {
+   "check": "soft.max_drift",
+   "ok": true,
+   "detail": "max_drift=1.4536 mm"
+  },
+  {
+   "check": "soft.no_verdict",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "hard.one_late_jump",
+   "ok": true,
+   "detail": "moves=1 delta=0.454545"
+  },
+  {
+   "check": "hard.large_drift",
+   "ok": true,
+   "detail": "drift=7.9826 mm"
+  },
+  {
+   "check": "hard.volume_overshoot",
+   "ok": true,
+   "detail": "volume=187686.3 (target band 60k-100k)"
+  },
+  {
+   "check": "hard.worse_than_soft",
+   "ok": true,
+   "detail": "hard=187686.3 soft=98087.844"
+  },
+  {
+   "check": "hash.deterministic",
+   "ok": true,
+   "detail": "91d32798471f"
+  },
+  {
+   "check": "hash.seed_changes_lineage_only",
+   "ok": true,
+   "detail": "genome=True lineage_changed=True"
+  },
+  {
+   "check": "metric.field_drift_0p5mm",
+   "ok": true,
+   "detail": "drift=0.5001 mm"
+  }
+ ]
+}

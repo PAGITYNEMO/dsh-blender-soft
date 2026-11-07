@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Soft field">
+  <defs>
+    <radialGradient id="amber" cx="34%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#ffd9a0"/>
+      <stop offset="0.42" stop-color="#f39a3d"/>
+      <stop offset="0.78" stop-color="#c45f16"/>
+      <stop offset="1" stop-color="#7a350b"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffcf8a" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffcf8a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="128" height="128" rx="24" fill="#10141a"/>
+  <g stroke="#26303d" stroke-width="1" opacity="0.75">
+    <path d="M16 0V128M32 0V128M48 0V128M64 0V128M80 0V128M96 0V128M112 0V128"/>
+    <path d="M0 16H128M0 32H128M0 48H128M0 64H128M0 80H128M0 96H128M0 112H128"/>
+  </g>
+
+  <g fill="url(#amber)">
+    <circle cx="52" cy="62" r="31"/>
+    <circle cx="82" cy="52" r="21"/>
+    <circle cx="84" cy="82" r="18"/>
+    <rect x="47" y="49" width="36" height="29" rx="14"/>
+  </g>
+  <ellipse cx="63" cy="47" rx="9" ry="5.5" fill="#10141a" opacity="0.9"/>
+  <path d="M30 44C38 26 58 20 74 24" fill="none" stroke="url(#rim)" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#ffd9a0" opacity="0.85">
+    <circle cx="40" cy="46" r="2.2"/>
+    <circle cx="47" cy="38" r="1.4"/>
+  </g>
+</svg>

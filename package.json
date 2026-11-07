@@ -1,0 +1,26 @@
+{
+  "name": "dsh-blender-soft",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Implicit SDF geometry and soft constraint energies for DSH, rendered in headless Blender. Never blocks and never returns a delivery verdict.",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "runtime/*.py",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

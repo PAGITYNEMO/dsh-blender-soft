@@ -1,0 +1,28 @@
+{
+ "op": "propose",
+ "genome": {
+  "bounds": [
+   [
+    -40,
+    -40,
+    -40
+   ],
+   [
+    40,
+    40,
+    40
+   ]
+  ],
+  "resolution": 64,
+  "primitives": [
+   {
+    "id": "s",
+    "type": "sphere",
+    "radius": 20.0
+   }
+  ]
+ },
+ "terms": [],
+ "t": 0.0,
+ "out_dir": "G:/2026.10.31/dsh-blender-soft/runs/smoke"
+}

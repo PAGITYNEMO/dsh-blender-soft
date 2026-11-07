@@ -1,0 +1,355 @@
+{
+ "ok": true,
+ "engine": "0.1.0",
+ "op": "propose",
+ "phase": "explore",
+ "gate": {
+  "mode": "none",
+  "why": "this layer reports energies; it never turns one into a block/pass verdict"
+ },
+ "genome_hash": "11ebc3bcf1391492efb1e1d6ee6dbd76b6b5f776b5180cd00f75a531ae52b0ec",
+ "lineage_hash": "ee94adb2903a84d36b14553f04ed47b7746d9fb5f8198c9fb322a79f103d9f88",
+ "seed": 0,
+ "tunables": [
+  "r_body",
+  "r_arm",
+  "spread",
+  "rise",
+  "r_hole"
+ ],
+ "knob_ranges": {
+  "r_body": [
+   14.0,
+   36.0
+  ],
+  "r_arm": [
+   3.0,
+   14.0
+  ],
+  "spread": [
+   8.0,
+   42.0
+  ],
+  "rise": [
+   -10.0,
+   48.0
+  ],
+  "r_hole": [
+   2.0,
+   14.0
+  ]
+ },
+ "signals": [],
+ "notes": [
+  "free proposal: energy weights are 0.00 at t=0.00; measurements are feedback, not permission"
+ ],
+ "artifacts": {
+  "previews": [
+   {
+    "label": "proposal",
+    "t": 0.0,
+    "path": "G:/2026.10.31/dsh-blender-soft/runs/tool_smoke\\preview_00_proposal.png",
+    "geometry": {
+     "verts": 2784,
+     "faces": 2784,
+     "tris": 5568,
+     "boundary_edges": 0,
+     "nonmanifold_edges": 0,
+     "euler": 0,
+     "components": 1,
+     "closed": true,
+     "volume_mm3": 69073.838,
+     "area_mm2": 10786.73,
+     "bbox_mm": [
+      [
+       -31.664,
+       -25.945,
+       -23.681
+      ],
+      [
+       31.664,
+       25.945,
+       25.749
+      ]
+     ],
+     "size_mm": [
+      63.328,
+      51.891,
+      49.43
+     ]
+    },
+    "render": {
+     "fixed_by_validate": false,
+     "verts": 2784,
+     "faces": 2784
+    }
+   }
+  ],
+  "hero": "G:/2026.10.31/dsh-blender-soft/runs/tool_smoke\\preview_00_proposal.png",
+  "glb": "G:/2026.10.31/dsh-blender-soft/runs/tool_smoke\\shape.glb",
+  "glb_bytes": 101332,
+  "out_dir": "G:/2026.10.31/dsh-blender-soft/runs/tool_smoke"
+ },
+ "report": {
+  "t": 0.0,
+  "total": 0.0,
+  "terms": [
+   {
+    "id": "thickness",
+    "weight": 1.0,
+    "effective_weight": 0.0,
+    "raw": 0.015144,
+    "weighted": 0.0,
+    "measured": 7.913447,
+    "unit": "mm",
+    "target": 6.0,
+    "tol": 0.05,
+    "state": "ok",
+    "schedule": {
+     "start": 0.3,
+     "end": 0.95
+    },
+    "detail": {
+     "p05": 5.714,
+     "p50": 14.893,
+     "p95": 16.948,
+     "censored_frac": 0.0
+    }
+   },
+   {
+    "id": "symmetry",
+    "weight": 0.4,
+    "effective_weight": 0.0,
+    "raw": 0.000239,
+    "weighted": 0.0,
+    "measured": 0.201,
+    "unit": "mm (rms off-mirror)",
+    "target": 0.0,
+    "tol": 0.05,
+    "state": "ok",
+    "schedule": {
+     "start": 0.45,
+     "end": 1
+    },
+    "detail": {
+     "plane": "x",
+     "center": 0.0,
+     "scale_mm": 12.99
+    }
+   }
+  ],
+  "geometry": {
+   "verts": 2784,
+   "faces": 2784,
+   "tris": 5568,
+   "boundary_edges": 0,
+   "nonmanifold_edges": 0,
+   "euler": 0,
+   "components": 1,
+   "closed": true,
+   "volume_mm3": 69073.838,
+   "area_mm2": 10786.73,
+   "bbox_mm": [
+    [
+     -31.664,
+     -25.945,
+     -23.681
+    ],
+    [
+     31.664,
+     25.945,
+     25.749
+    ]
+   ],
+   "size_mm": [
+    63.328,
+    51.891,
+    49.43
+   ]
+  },
+  "genome": {
+   "bounds": [
+    [
+     -75,
+     -75,
+     -75
+    ],
+    [
+     75,
+     75,
+     75
+    ]
+   ],
+   "resolution": 64,
+   "primitives": [
+    {
+     "id": "body",
+     "type": "sphere",
+     "radius": 26.0
+    },
+    {
+     "id": "armR",
+     "type": "capsule",
+     "a": [
+      0,
+      0,
+      0
+     ],
+     "b": [
+      26.0,
+      0,
+      20.0
+     ],
+     "radius": 6.0,
+     "mirror": "x"
+    },
+    {
+     "id": "hole",
+     "type": "cylinder",
+     "center": [
+      0,
+      0,
+      0
+     ],
+     "radius": 7.0,
+     "height": 300
+    }
+   ],
+   "build": [
+    {
+     "op": "union",
+     "ids": [
+      "body",
+      "armR"
+     ],
+     "k": 10
+    },
+    {
+     "op": "subtract",
+     "ids": [
+      "hole"
+     ],
+     "k": 4
+    }
+   ],
+   "knobs": {
+    "r_body": 26.0,
+    "r_arm": 6.0,
+    "spread": 26.0,
+    "rise": 20.0,
+    "r_hole": 7.0
+   }
+  }
+ },
+ "gradient": null,
+ "genome": {
+  "bounds": [
+   [
+    -75,
+    -75,
+    -75
+   ],
+   [
+    75,
+    75,
+    75
+   ]
+  ],
+  "resolution": 64,
+  "primitives": [
+   {
+    "id": "body",
+    "type": "sphere",
+    "radius": 26.0
+   },
+   {
+    "id": "armR",
+    "type": "capsule",
+    "a": [
+     0,
+     0,
+     0
+    ],
+    "b": [
+     26.0,
+     0,
+     20.0
+    ],
+    "radius": 6.0,
+    "mirror": "x"
+   },
+   {
+    "id": "hole",
+    "type": "cylinder",
+    "center": [
+     0,
+     0,
+     0
+    ],
+    "radius": 7.0,
+    "height": 300
+   }
+  ],
+  "build": [
+   {
+    "op": "union",
+    "ids": [
+     "body",
+     "armR"
+    ],
+    "k": 10
+   },
+   {
+    "op": "subtract",
+    "ids": [
+     "hole"
+    ],
+    "k": 4
+   }
+  ],
+  "knobs": {
+   "r_body": 26.0,
+   "r_arm": 6.0,
+   "spread": 26.0,
+   "rise": 20.0,
+   "r_hole": 7.0
+  }
+ },
+ "snapshots": [
+  {
+   "label": "proposal",
+   "t": 0.0,
+   "geometry": {
+    "verts": 2784,
+    "faces": 2784,
+    "tris": 5568,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "euler": 0,
+    "components": 1,
+    "closed": true,
+    "volume_mm3": 69073.838,
+    "area_mm2": 10786.73,
+    "bbox_mm": [
+     [
+      -31.664,
+      -25.945,
+      -23.681
+     ],
+     [
+      31.664,
+      25.945,
+      25.749
+     ]
+    ],
+    "size_mm": [
+     63.328,
+     51.891,
+     49.43
+    ]
+   }
+  }
+ ],
+ "blender": "4.5.15 LTS",
+ "elapsed_s": 5.25
+}

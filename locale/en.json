@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Blender Soft Field",
+    "description": "Implicit SDF shapes plus soft constraint energies in headless Blender. It measures and guides; it never blocks and never returns a delivery verdict."
+  }
+}

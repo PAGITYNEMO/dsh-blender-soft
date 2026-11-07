@@ -1,0 +1,141 @@
+{
+ "op": "refine",
+ "genome": {
+  "bounds": [
+   [
+    -75,
+    -75,
+    -75
+   ],
+   [
+    75,
+    75,
+    75
+   ]
+  ],
+  "resolution": 64,
+  "knobs": {
+   "r_body": {
+    "value": 26,
+    "min": 14,
+    "max": 36
+   },
+   "r_arm": {
+    "value": 4.0,
+    "min": 3,
+    "max": 14
+   },
+   "spread": {
+    "value": 26,
+    "min": 8,
+    "max": 42
+   },
+   "rise": {
+    "value": 20,
+    "min": -10,
+    "max": 48
+   },
+   "r_hole": {
+    "value": 7,
+    "min": 2,
+    "max": 14
+   }
+  },
+  "primitives": [
+   {
+    "id": "body",
+    "type": "sphere",
+    "radius": "@r_body"
+   },
+   {
+    "id": "armR",
+    "type": "capsule",
+    "a": [
+     0,
+     0,
+     0
+    ],
+    "b": [
+     "@spread",
+     0,
+     "@rise"
+    ],
+    "radius": "@r_arm",
+    "mirror": "x"
+   },
+   {
+    "id": "hole",
+    "type": "cylinder",
+    "center": [
+     0,
+     0,
+     0
+    ],
+    "radius": "@r_hole",
+    "height": 300
+   }
+  ],
+  "build": [
+   {
+    "op": "union",
+    "ids": [
+     "body",
+     "armR"
+    ],
+    "k": 10
+   },
+   {
+    "op": "subtract",
+    "ids": [
+     "hole"
+    ],
+    "k": 4
+   }
+  ]
+ },
+ "terms": [
+  {
+   "id": "thickness",
+   "weight": 1.0,
+   "target": 6.0,
+   "q": 0.1,
+   "schedule": {
+    "start": 0.3,
+    "end": 0.95
+   }
+  },
+  {
+   "id": "symmetry",
+   "weight": 0.4,
+   "axis": "x",
+   "center": 0,
+   "tol": 0.05,
+   "schedule": {
+    "start": 0.45,
+    "end": 1.0
+   }
+  },
+  {
+   "id": "volume",
+   "weight": 0.15,
+   "target": 80000,
+   "tol": 0.25,
+   "schedule": {
+    "start": 0.0,
+    "end": 0.4
+   }
+  }
+ ],
+ "steps": 10,
+ "lr": 0.08,
+ "mode": "soft",
+ "gradient": false,
+ "out_dir": "G:/2026.10.31/dsh-blender-soft/runs/demo_soft",
+ "tunables": [
+  "r_body",
+  "r_arm",
+  "spread",
+  "rise",
+  "r_hole"
+ ]
+}

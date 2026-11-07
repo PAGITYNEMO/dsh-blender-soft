@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Blender 软场",
+    "description": "无头 Blender 里的隐式 SDF 几何与软约束能量。只测量和引导，不阻断，也不返回交付判定。"
+  }
+}

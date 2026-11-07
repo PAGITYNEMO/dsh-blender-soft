@@ -1,0 +1,185 @@
+{
+ "ok": true,
+ "engine": "0.1.0",
+ "op": "propose",
+ "phase": "explore",
+ "gate": {
+  "mode": "none",
+  "why": "this layer reports energies; it never turns one into a block/pass verdict"
+ },
+ "genome_hash": "653ce2e77b19b26e5b641a0d14f5ee82d85f668065ab412ef9737d0591cbafe8",
+ "lineage_hash": "591091c98bc9a742c722fae615c01e0293448db9df1a123f5c5964ebae929937",
+ "seed": 0,
+ "tunables": [],
+ "knob_ranges": {},
+ "signals": [],
+ "notes": [
+  "free proposal: energy weights are 0.00 at t=0.00; measurements are feedback, not permission",
+  "no energy terms supplied: pure geometry proposal"
+ ],
+ "artifacts": {
+  "previews": [
+   {
+    "label": "proposal",
+    "t": 0.0,
+    "path": "G:/2026.10.31/dsh-blender-soft/runs/smoke3\\preview_00_proposal.png",
+    "geometry": {
+     "verts": 4730,
+     "faces": 4728,
+     "tris": 9456,
+     "boundary_edges": 0,
+     "nonmanifold_edges": 0,
+     "euler": 2,
+     "components": 1,
+     "closed": true,
+     "volume_mm3": 33356.797,
+     "area_mm2": 5014.248,
+     "bbox_mm": [
+      [
+       -19.98,
+       -19.98,
+       -19.98
+      ],
+      [
+       19.98,
+       19.98,
+       19.98
+      ]
+     ],
+     "size_mm": [
+      39.96,
+      39.96,
+      39.96
+     ]
+    },
+    "render": {
+     "fixed_by_validate": false,
+     "verts": 4730,
+     "faces": 4728
+    }
+   }
+  ],
+  "hero": "G:/2026.10.31/dsh-blender-soft/runs/smoke3\\preview_00_proposal.png",
+  "glb": "G:/2026.10.31/dsh-blender-soft/runs/smoke3\\shape.glb",
+  "glb_bytes": 171368,
+  "out_dir": "G:/2026.10.31/dsh-blender-soft/runs/smoke3"
+ },
+ "report": {
+  "t": 0.0,
+  "total": 0.0,
+  "terms": [],
+  "geometry": {
+   "verts": 4730,
+   "faces": 4728,
+   "tris": 9456,
+   "boundary_edges": 0,
+   "nonmanifold_edges": 0,
+   "euler": 2,
+   "components": 1,
+   "closed": true,
+   "volume_mm3": 33356.797,
+   "area_mm2": 5014.248,
+   "bbox_mm": [
+    [
+     -19.98,
+     -19.98,
+     -19.98
+    ],
+    [
+     19.98,
+     19.98,
+     19.98
+    ]
+   ],
+   "size_mm": [
+    39.96,
+    39.96,
+    39.96
+   ]
+  },
+  "genome": {
+   "bounds": [
+    [
+     -40,
+     -40,
+     -40
+    ],
+    [
+     40,
+     40,
+     40
+    ]
+   ],
+   "resolution": 64,
+   "primitives": [
+    {
+     "id": "s",
+     "type": "sphere",
+     "radius": 20.0
+    }
+   ],
+   "knobs": {}
+  }
+ },
+ "gradient": null,
+ "genome": {
+  "bounds": [
+   [
+    -40,
+    -40,
+    -40
+   ],
+   [
+    40,
+    40,
+    40
+   ]
+  ],
+  "resolution": 64,
+  "primitives": [
+   {
+    "id": "s",
+    "type": "sphere",
+    "radius": 20.0
+   }
+  ],
+  "knobs": {}
+ },
+ "snapshots": [
+  {
+   "label": "proposal",
+   "t": 0.0,
+   "geometry": {
+    "verts": 4730,
+    "faces": 4728,
+    "tris": 9456,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "euler": 2,
+    "components": 1,
+    "closed": true,
+    "volume_mm3": 33356.797,
+    "area_mm2": 5014.248,
+    "bbox_mm": [
+     [
+      -19.98,
+      -19.98,
+      -19.98
+     ],
+     [
+      19.98,
+      19.98,
+      19.98
+     ]
+    ],
+    "size_mm": [
+     39.96,
+     39.96,
+     39.96
+    ]
+   }
+  }
+ ],
+ "blender": "4.5.15 LTS",
+ "elapsed_s": 5.34
+}

@@ -1,0 +1,776 @@
+{
+ "ok": true,
+ "engine": "0.1.0",
+ "op": "refine",
+ "phase": "explore",
+ "gate": {
+  "mode": "none",
+  "why": "this layer reports energies; it never turns one into a block/pass verdict"
+ },
+ "genome_hash": "91d32798471f29158da9019757ab441d2d52236d3f6506668141afbcbfeb959e",
+ "lineage_hash": "1a0f0f4d682b487116e75c80d0a41dbd776df1711569f09d49b5bf4cfd33624f",
+ "seed": 0,
+ "tunables": [
+  "r_body",
+  "r_arm",
+  "spread",
+  "rise",
+  "r_hole"
+ ],
+ "knob_ranges": {
+  "r_body": [
+   14.0,
+   36.0
+  ],
+  "r_arm": [
+   3.0,
+   14.0
+  ],
+  "spread": [
+   8.0,
+   42.0
+  ],
+  "rise": [
+   -10.0,
+   48.0
+  ],
+  "r_hole": [
+   2.0,
+   14.0
+  ]
+ },
+ "signals": [],
+ "notes": [
+  "refine ran after the free proposal; each step's effective weights are in history",
+  "hard mode is included only as an A/B control: it applies all weight in one late step"
+ ],
+ "artifacts": {
+  "previews": [
+   {
+    "label": "free",
+    "t": 0.0,
+    "path": "G:/2026.10.31/dsh-blender-soft/runs/demo_soft\\preview_00_free.png",
+    "geometry": {
+     "verts": 2740,
+     "faces": 2740,
+     "tris": 5480,
+     "boundary_edges": 0,
+     "nonmanifold_edges": 0,
+     "euler": 0,
+     "components": 1,
+     "closed": true,
+     "volume_mm3": 67080.055,
+     "area_mm2": 10492.927,
+     "bbox_mm": [
+      [
+       -29.786,
+       -25.945,
+       -23.681
+      ],
+      [
+       29.786,
+       25.945,
+       23.721
+      ]
+     ],
+     "size_mm": [
+      59.572,
+      51.891,
+      47.401
+     ]
+    },
+    "render": {
+     "fixed_by_validate": false,
+     "verts": 2740,
+     "faces": 2740
+    }
+   },
+   {
+    "label": "mid",
+    "t": 0.5556,
+    "path": "G:/2026.10.31/dsh-blender-soft/runs/demo_soft\\preview_01_mid.png",
+    "geometry": {
+     "verts": 3348,
+     "faces": 3348,
+     "tris": 6696,
+     "boundary_edges": 0,
+     "nonmanifold_edges": 0,
+     "euler": 0,
+     "components": 1,
+     "closed": true,
+     "volume_mm3": 103041.461,
+     "area_mm2": 12996.647,
+     "bbox_mm": [
+      [
+       -31.574,
+       -29.469,
+       -27.811
+      ],
+      [
+       31.574,
+       29.469,
+       27.811
+      ]
+     ],
+     "size_mm": [
+      63.148,
+      58.938,
+      55.622
+     ]
+    },
+    "render": {
+     "fixed_by_validate": false,
+     "verts": 3348,
+     "faces": 3348
+    }
+   },
+   {
+    "label": "refined",
+    "t": 1.0,
+    "path": "G:/2026.10.31/dsh-blender-soft/runs/demo_soft\\preview_02_refined.png",
+    "geometry": {
+     "verts": 2864,
+     "faces": 2864,
+     "tris": 5728,
+     "boundary_edges": 0,
+     "nonmanifold_edges": 0,
+     "euler": 0,
+     "components": 1,
+     "closed": true,
+     "volume_mm3": 88508.809,
+     "area_mm2": 11026.123,
+     "bbox_mm": [
+      [
+       -31.02,
+       -27.614,
+       -26.509
+      ],
+      [
+       31.02,
+       27.614,
+       26.509
+      ]
+     ],
+     "size_mm": [
+      62.04,
+      55.227,
+      53.017
+     ]
+    },
+    "render": {
+     "fixed_by_validate": false,
+     "verts": 2864,
+     "faces": 2864
+    }
+   }
+  ],
+  "hero": "G:/2026.10.31/dsh-blender-soft/runs/demo_soft\\preview_02_refined.png",
+  "glb": "G:/2026.10.31/dsh-blender-soft/runs/demo_soft\\shape.glb",
+  "glb_bytes": 104212,
+  "out_dir": "G:/2026.10.31/dsh-blender-soft/runs/demo_soft"
+ },
+ "report": {
+  "t": 1.0,
+  "total": 0.000133,
+  "terms": [
+   {
+    "id": "thickness",
+    "weight": 1.0,
+    "effective_weight": 1.0,
+    "raw": 0.0,
+    "weighted": 0.0,
+    "measured": 11.075685,
+    "unit": "mm",
+    "target": 6.0,
+    "tol": 0.05,
+    "state": "ok",
+    "schedule": {
+     "start": 0.3,
+     "end": 0.95
+    },
+    "detail": {
+     "p05": 9.314,
+     "p50": 19.722,
+     "p95": 21.925,
+     "censored_frac": 0.0
+    }
+   },
+   {
+    "id": "symmetry",
+    "weight": 0.4,
+    "effective_weight": 0.4,
+    "raw": 0.000333,
+    "weighted": 0.000133,
+    "measured": 0.237,
+    "unit": "mm (rms off-mirror)",
+    "target": 0.0,
+    "tol": 0.05,
+    "state": "ok",
+    "schedule": {
+     "start": 0.45,
+     "end": 1.0
+    },
+    "detail": {
+     "plane": "x",
+     "center": 0.0,
+     "scale_mm": 12.99
+    }
+   },
+   {
+    "id": "volume",
+    "weight": 0.15,
+    "effective_weight": 0.15,
+    "raw": 0.0,
+    "weighted": 0.0,
+    "measured": 88508.809,
+    "unit": "mm^3",
+    "target": 80000.0,
+    "tol": 0.25,
+    "state": "ok",
+    "schedule": {
+     "start": 0.0,
+     "end": 0.4
+    },
+    "detail": {}
+   }
+  ],
+  "geometry": {
+   "verts": 2864,
+   "faces": 2864,
+   "tris": 5728,
+   "boundary_edges": 0,
+   "nonmanifold_edges": 0,
+   "euler": 0,
+   "components": 1,
+   "closed": true,
+   "volume_mm3": 88508.809,
+   "area_mm2": 11026.123,
+   "bbox_mm": [
+    [
+     -31.02,
+     -27.614,
+     -26.509
+    ],
+    [
+     31.02,
+     27.614,
+     26.509
+    ]
+   ],
+   "size_mm": [
+    62.04,
+    55.227,
+    53.017
+   ]
+  },
+  "genome": {
+   "bounds": [
+    [
+     -75,
+     -75,
+     -75
+    ],
+    [
+     75,
+     75,
+     75
+    ]
+   ],
+   "resolution": 64,
+   "primitives": [
+    {
+     "id": "body",
+     "type": "sphere",
+     "radius": 27.66498469447915
+    },
+    {
+     "id": "armR",
+     "type": "capsule",
+     "a": [
+      0,
+      0,
+      0
+     ],
+     "b": [
+      26.72581047044021,
+      0,
+      20.596077005336895
+     ],
+     "radius": 4.71551604782357,
+     "mirror": "x"
+    },
+    {
+     "id": "hole",
+     "type": "cylinder",
+     "center": [
+      0,
+      0,
+      0
+     ],
+     "radius": 3.7064007401540677,
+     "height": 300
+    }
+   ],
+   "build": [
+    {
+     "op": "union",
+     "ids": [
+      "body",
+      "armR"
+     ],
+     "k": 10
+    },
+    {
+     "op": "subtract",
+     "ids": [
+      "hole"
+     ],
+     "k": 4
+    }
+   ],
+   "knobs": {
+    "r_body": 27.66498469447915,
+    "r_arm": 4.71551604782357,
+    "spread": 26.72581047044021,
+    "rise": 20.596077005336895,
+    "r_hole": 3.7064007401540677
+   }
+  }
+ },
+ "gradient": null,
+ "genome": {
+  "bounds": [
+   [
+    -75,
+    -75,
+    -75
+   ],
+   [
+    75,
+    75,
+    75
+   ]
+  ],
+  "resolution": 64,
+  "primitives": [
+   {
+    "id": "body",
+    "type": "sphere",
+    "radius": 26.0
+   },
+   {
+    "id": "armR",
+    "type": "capsule",
+    "a": [
+     0,
+     0,
+     0
+    ],
+    "b": [
+     26.0,
+     0,
+     20.0
+    ],
+    "radius": 4.0,
+    "mirror": "x"
+   },
+   {
+    "id": "hole",
+    "type": "cylinder",
+    "center": [
+     0,
+     0,
+     0
+    ],
+    "radius": 7.0,
+    "height": 300
+   }
+  ],
+  "build": [
+   {
+    "op": "union",
+    "ids": [
+     "body",
+     "armR"
+    ],
+    "k": 10
+   },
+   {
+    "op": "subtract",
+    "ids": [
+     "hole"
+    ],
+    "k": 4
+   }
+  ],
+  "knobs": {
+   "r_body": 26.0,
+   "r_arm": 4.0,
+   "spread": 26.0,
+   "rise": 20.0,
+   "r_hole": 7.0
+  }
+ },
+ "final_genome": {
+  "bounds": [
+   [
+    -75,
+    -75,
+    -75
+   ],
+   [
+    75,
+    75,
+    75
+   ]
+  ],
+  "resolution": 64,
+  "primitives": [
+   {
+    "id": "body",
+    "type": "sphere",
+    "radius": 27.66498469447915
+   },
+   {
+    "id": "armR",
+    "type": "capsule",
+    "a": [
+     0,
+     0,
+     0
+    ],
+    "b": [
+     26.72581047044021,
+     0,
+     20.596077005336895
+    ],
+    "radius": 4.71551604782357,
+    "mirror": "x"
+   },
+   {
+    "id": "hole",
+    "type": "cylinder",
+    "center": [
+     0,
+     0,
+     0
+    ],
+    "radius": 3.7064007401540677,
+    "height": 300
+   }
+  ],
+  "build": [
+   {
+    "op": "union",
+    "ids": [
+     "body",
+     "armR"
+    ],
+    "k": 10
+   },
+   {
+    "op": "subtract",
+    "ids": [
+     "hole"
+    ],
+    "k": 4
+   }
+  ],
+  "knobs": {
+   "r_body": 27.66498469447915,
+   "r_arm": 4.71551604782357,
+   "spread": 26.72581047044021,
+   "rise": 20.596077005336895,
+   "r_hole": 3.7064007401540677
+  }
+ },
+ "final_genome_hash": "bc650720f7b68b4e3e7922bd10252091967ada81c73e61f97225d94111cfd75d",
+ "mode": "soft",
+ "steps": 10,
+ "lr": 0.08,
+ "history": [
+  {
+   "step": 0,
+   "t": 0.0,
+   "total": 0.0,
+   "terms": {
+    "thickness": 6.640984,
+    "symmetry": 0.176,
+    "volume": 67080.055
+   },
+   "weights": {
+    "thickness": 0.0,
+    "symmetry": 0.0,
+    "volume": 0.0
+   },
+   "max_delta_norm": null,
+   "chamfer_mm": null,
+   "step_scale": null
+  },
+  {
+   "step": 1,
+   "t": 0.1111,
+   "total": 0.0,
+   "terms": {
+    "thickness": 6.640984,
+    "symmetry": 0.176,
+    "volume": 67080.055
+   },
+   "weights": {
+    "thickness": 0.0,
+    "symmetry": 0.0,
+    "volume": 0.028292
+   },
+   "max_delta_norm": 0.0,
+   "chamfer_mm": 0.0,
+   "step_scale": 0.0
+  },
+  {
+   "step": 2,
+   "t": 0.2222,
+   "total": 0.0,
+   "terms": {
+    "thickness": 6.640984,
+    "symmetry": 0.176,
+    "volume": 67080.055
+   },
+   "weights": {
+    "thickness": 0.0,
+    "symmetry": 0.0,
+    "volume": 0.087449
+   },
+   "max_delta_norm": 0.0,
+   "chamfer_mm": 0.0,
+   "step_scale": 0.0
+  },
+  {
+   "step": 3,
+   "t": 0.3333,
+   "total": 0.000112,
+   "terms": {
+    "thickness": 6.616096,
+    "symmetry": 0.215,
+    "volume": 73089.802
+   },
+   "weights": {
+    "thickness": 0.00762,
+    "symmetry": 0.0,
+    "volume": 0.138889
+   },
+   "max_delta_norm": 0.08,
+   "chamfer_mm": 0.8731,
+   "step_scale": 1.0
+  },
+  {
+   "step": 4,
+   "t": 0.4444,
+   "total": 0.001458,
+   "terms": {
+    "thickness": 8.922675,
+    "symmetry": 0.248,
+    "volume": 90445.089
+   },
+   "weights": {
+    "thickness": 0.1262,
+    "symmetry": 0.0,
+    "volume": 0.15
+   },
+   "max_delta_norm": 0.08,
+   "chamfer_mm": 1.4209,
+   "step_scale": 1.0
+  },
+  {
+   "step": 5,
+   "t": 0.5556,
+   "total": 0.001619,
+   "terms": {
+    "thickness": 10.228637,
+    "symmetry": 0.293,
+    "volume": 103041.461
+   },
+   "weights": {
+    "thickness": 0.342183,
+    "symmetry": 0.038544,
+    "volume": 0.15
+   },
+   "max_delta_norm": 0.08,
+   "chamfer_mm": 0.9462,
+   "step_scale": 1.0
+  },
+  {
+   "step": 6,
+   "t": 0.6667,
+   "total": 0.000607,
+   "terms": {
+    "thickness": 10.359244,
+    "symmetry": 0.254,
+    "volume": 97724.399
+   },
+   "weights": {
+    "thickness": 0.595627,
+    "symmetry": 0.137318,
+    "volume": 0.15
+   },
+   "max_delta_norm": 0.08,
+   "chamfer_mm": 0.666,
+   "step_scale": 1.0
+  },
+  {
+   "step": 7,
+   "t": 0.7778,
+   "total": 9.6e-05,
+   "terms": {
+    "thickness": 10.98949,
+    "symmetry": 0.251,
+    "volume": 95359.151
+   },
+   "weights": {
+    "thickness": 0.826594,
+    "symmetry": 0.256869,
+    "volume": 0.15
+   },
+   "max_delta_norm": 0.08,
+   "chamfer_mm": 0.4035,
+   "step_scale": 1.0
+  },
+  {
+   "step": 8,
+   "t": 0.8889,
+   "total": 0.000128,
+   "terms": {
+    "thickness": 10.644804,
+    "symmetry": 0.234,
+    "volume": 90858.217
+   },
+   "weights": {
+    "thickness": 0.975144,
+    "symmetry": 0.357621,
+    "volume": 0.15
+   },
+   "max_delta_norm": 0.02,
+   "chamfer_mm": 0.3941,
+   "step_scale": 0.25
+  },
+  {
+   "step": 9,
+   "t": 1.0,
+   "total": 0.000133,
+   "terms": {
+    "thickness": 11.075685,
+    "symmetry": 0.237,
+    "volume": 88508.809
+   },
+   "weights": {
+    "thickness": 1.0,
+    "symmetry": 0.4,
+    "volume": 0.15
+   },
+   "max_delta_norm": 0.04,
+   "chamfer_mm": 0.3415,
+   "step_scale": 0.5
+  }
+ ],
+ "snapshots": [
+  {
+   "label": "free",
+   "t": 0.0,
+   "geometry": {
+    "verts": 2740,
+    "faces": 2740,
+    "tris": 5480,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "euler": 0,
+    "components": 1,
+    "closed": true,
+    "volume_mm3": 67080.055,
+    "area_mm2": 10492.927,
+    "bbox_mm": [
+     [
+      -29.786,
+      -25.945,
+      -23.681
+     ],
+     [
+      29.786,
+      25.945,
+      23.721
+     ]
+    ],
+    "size_mm": [
+     59.572,
+     51.891,
+     47.401
+    ]
+   }
+  },
+  {
+   "label": "mid",
+   "t": 0.5556,
+   "geometry": {
+    "verts": 3348,
+    "faces": 3348,
+    "tris": 6696,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "euler": 0,
+    "components": 1,
+    "closed": true,
+    "volume_mm3": 103041.461,
+    "area_mm2": 12996.647,
+    "bbox_mm": [
+     [
+      -31.574,
+      -29.469,
+      -27.811
+     ],
+     [
+      31.574,
+      29.469,
+      27.811
+     ]
+    ],
+    "size_mm": [
+     63.148,
+     58.938,
+     55.622
+    ]
+   }
+  },
+  {
+   "label": "refined",
+   "t": 1.0,
+   "geometry": {
+    "verts": 2864,
+    "faces": 2864,
+    "tris": 5728,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "euler": 0,
+    "components": 1,
+    "closed": true,
+    "volume_mm3": 88508.809,
+    "area_mm2": 11026.123,
+    "bbox_mm": [
+     [
+      -31.02,
+      -27.614,
+      -26.509
+     ],
+     [
+      31.02,
+      27.614,
+      26.509
+     ]
+    ],
+    "size_mm": [
+     62.04,
+     55.227,
+     53.017
+    ]
+   }
+  }
+ ],
+ "blender": "4.5.15 LTS",
+ "elapsed_s": 26.39
+}
